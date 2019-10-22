@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://nat:pJC7omzrmEdHsfHj@cluster0-gfygm.mongodb.net/Dev-connect?retryWrites=true&w=majority",
-  "jwtSecret": "M#0cI!v7k$l&"
+  "jwtSecret": "M#0cI!v7k$l&",
+  "githubClientId": "39b0b5adf1c058cdc6b4",
+  "githubClientSecret": "c73c75bc78cde6def103761fdbffac741e4983a2"
 }
