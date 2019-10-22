@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://nat:pJC7omzrmEdHsfHj@cluster0-gfygm.mongodb.net/Dev-connect?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://nat:pJC7omzrmEdHsfHj@cluster0-gfygm.mongodb.net/Dev-connect?retryWrites=true&w=majority",
+  "jwtSecret": "M#0cI!v7k$l&"
 }
