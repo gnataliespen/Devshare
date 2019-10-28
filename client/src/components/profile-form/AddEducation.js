@@ -99,12 +99,7 @@ const AddEducation = ({ history, addEducation }) => {
           style={toDateDisabled ? { display: "none" } : null}
         >
           <h4>To Date</h4>
-          <input
-            type="date"
-            name="to"
-            value={from}
-            onChange={e => onChange(e)}
-          />
+          <input type="date" name="to" value={to} onChange={e => onChange(e)} />
         </div>
         <div className="form-group">
           <textarea
@@ -132,4 +127,4 @@ AddEducation.propTypes = {
 export default connect(
   null,
   { addEducation },
-)(AddEducation);
+)(withRouter(AddEducation));

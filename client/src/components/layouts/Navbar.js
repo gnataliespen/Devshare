@@ -6,7 +6,7 @@ import { logout } from "../../actions/auth";
 
 const Navbar = ({ auth: { isAuth, loading }, logout }) => {
   const authLinks = (
-    <ul>
+    <Fragment>
       <li>
         <Link to="/dashboard">
           <i className="fas fa-user" />
@@ -19,20 +19,17 @@ const Navbar = ({ auth: { isAuth, loading }, logout }) => {
           <span className="hide-sm">Logout</span>
         </a>
       </li>
-    </ul>
+    </Fragment>
   );
   const guestLinks = (
-    <ul>
-      <li>
-        <a href="#!">Developers</a>
-      </li>
+    <Fragment>
       <li>
         <Link to="/register">Register</Link>
       </li>
       <li>
         <Link to="/Login">Login</Link>
       </li>
-    </ul>
+    </Fragment>
   );
   return (
     <nav className="navbar bg-dark">
@@ -41,7 +38,12 @@ const Navbar = ({ auth: { isAuth, loading }, logout }) => {
           <i className="fas fa-code"></i> DevConnector
         </Link>
       </h1>
-      {!loading && <Fragment>{isAuth ? authLinks : guestLinks}</Fragment>}
+      <ul>
+        <li>
+          <Link to="/profiles">Developers</Link>
+        </li>
+        {!loading && <Fragment>{isAuth ? authLinks : guestLinks}</Fragment>}
+      </ul>
     </nav>
   );
 };
